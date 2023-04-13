@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+
+ <div class="wrapper">
+   <div id="game"></div>
+ 
+   <p id="info"></p>
+
+ </div>
+<style>
+  *{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+body{
+  text-align: center;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  }
+#game{
+  width: 360px;
+  height: 360px;
+  display:flex;
+  flex-wrap: wrap;
+  border: 1px solid black;
+}
+
+.square{
+  width: 110px;
+  height: 110px;
+  border: 2px solid black;
+  margin: 0 auto;
+  cursor: pointer;
+}
+.circle{
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  border: 10px solid red;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.cross{
+  width: 90px;
+  height: 90px;
+  position: relative;
+ 
+}
+.cross::after{
+  content: "";
+  transform: rotate(45deg);
+  display: inline-block;
+  /* transform: translate(-50%,-50%); */
+
+  
+  position: absolute;
+  top:50%;
+  left:0;
+  width: 100%;
+  height: 10%;
+
+  background: red;
+}
+.cross::before{
+  content: "";
+  /* display: inline-block; */
+  transform: rotate(-45deg);
+  width: 100%;
+  height: 10%;
+  position: absolute;
+  top:50%;
+  left:0;
+  background: red;
+}
+</style>
+<script src="mani.js"></script>
+</body>
+</html>
